@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务区域提示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transform: translateY(0);
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .icon {
+            font-size: 60px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        .message {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        .support-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 4px solid #007bff;
+        }
+        .support-info h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .support-info ul {
+            padding-left: 20px;
+        }
+        .support-info li {
+            margin: 8px 0;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        .footer {
+            margin-top: 30px;
+            color: #999;
+            font-size: 14px;
+        }
+        .globe {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🌍</div>
+        <h1>服务区域限制</h1>
+        <p class="message">很抱歉，您所在的地区目前暂未开通本服务。我们正在努力扩展服务范围，敬请期待。</p>
+        
+        <div class="support-info">
+            <h3>支持的地区</h3>
+            <ul>
+                <li>浙江省</li>
+            </ul>
+        </div>
+        
+        <p class="message">如果您认为此信息有误，或需要企业级服务支持，请联系我们的客服团队。</p>
+        
+        <div>
+            <a href="mailto:support@example.com" class="btn">
+                <span class="globe">📧</span> 联系客服
+            </a>
+            <a href="https://www.tengxinkeji.com" class="btn btn-secondary">
+                查看服务区域
+            </a>
+        </div>
+        
+        <div class="footer">
+            &copy; 2025 服务提供商. 保留所有权利.
+        </div>
+    </div>
+</body>
+</html>
